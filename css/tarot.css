@@ -61,7 +61,7 @@ main {
 }
 
 main ul {
-    width: 86%;
+    width: 100%;
     margin-bottom: 10px;
     margin-left: 12%;
 }
@@ -80,7 +80,7 @@ main ul li a {
     display: block;
     width: 100%;
     height: 100%;
-    font: bold 10px/26px 'Urbanist';
+    font: bold 12px/26px 'Urbanist';
     color: #3a033a;
     letter-spacing: 1px;
     text-align: center;
@@ -123,14 +123,14 @@ main section article div img {
 }
 main section article div h2 {
     margin-top: 15px;
-    font: bold 11px/1 'Urbanist';
+    font: bold 1rem/1 'Urbanist';
     letter-spacing: 1px;
     color: #333;
     margin-bottom: 5px;
 }
 main section article div h4 {
     margin-bottom: 15px;
-    font: bold 11px/1 'Noto Sans Korean';
+    font: bold 13px/1 'Noto Sans Korean';
     letter-spacing: 1px;
     color: #aaa;
     margin-bottom: 5px;
@@ -142,7 +142,7 @@ main section article div h4::after {
     content: ")";
 }
 main section article div p {
-    font: 10px/1.4 'Noto Sans Korean';
+    font: 12px/1.4 'Noto Sans Korean';
     color: #777;
     margin: 15px 0;
 }
@@ -157,6 +157,13 @@ main section article div:hover {
         width: 12%;
     }
 
+    header h1 > a {font-size: 1.8rem;}
+    header p {
+        font: normal 14px/1 'Urbanist';
+        line-height: 1.2;
+        color: #ccc;
+    }
+
     main section {
         width: 84%;
         margin-left: 8vw;
@@ -164,23 +171,26 @@ main section article div:hover {
     main section article {
         width: 25%;
     }
+    main ul {margin-left: 0;}
 }
 @media screen and (max-width: 1199px) {
     header {
         width: 100%;
-        height: 40px;
+        /* height: 40px; */
         position: relative;
+        box-sizing: border-box;
     }
     header div {
-        transform: translateY(-50%);
+        position: static;
+        transform: translateY(0%);
     }
     header h1 {
         font: bold 36px/1 'Urbanist';
     }
     header p {
-        font: normal 16px/1 'Urbanist';
+        font: normal 14px/1 'Urbanist';
         line-height: 1.4;
-        width: 75%;
+        width: 100%;
     }
 
     main {
@@ -217,10 +227,6 @@ main section article div:hover {
     header h1::after {
         width: 80px;
     }
-    header p {
-        font: normal 12px/1 'Urbanist';
-        line-height: 1.2;
-    }
     
     main ul {
         margin-right: 0px;
@@ -230,10 +236,12 @@ main section article div:hover {
     main ul li {
         margin-right: 2%;
         width: 100px;
+        height: auto;
     }
     main ul li:nth-of-type(1) {
         margin-right: 0%;
     }
+    main ul li a {font-size: 1rem;}
     main section article {
         width: 100%;
     }
